@@ -1,0 +1,8 @@
+node_modules
+**/assets/compiled/
+*.code-workspace
+/configs/*.local.ts
+src/server/logs/*
+package-lock.json
+yarn-error.log
+**/assets/img/external

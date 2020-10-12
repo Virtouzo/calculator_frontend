@@ -1,0 +1,80 @@
+{
+	"name": "client",
+	"private": true,
+	"version": "1.0.0",
+	"dependencies": {
+		"@babel/core": "^7.9.0",
+		"@babel/plugin-proposal-class-properties": "^7.8.3",
+		"@babel/plugin-proposal-decorators": "^7.8.3",
+		"@babel/plugin-proposal-optional-chaining": "^7.9.0",
+		"@babel/plugin-transform-runtime": "^7.9.0",
+		"@babel/polyfill": "^7.10.1",
+		"@babel/preset-env": "^7.9.5",
+		"@babel/preset-react": "^7.9.4",
+		"@babel/preset-typescript": "^7.9.0",
+		"@types/lodash": "^4.14.162",
+		"@types/react": "^16.9.51",
+		"@types/webpack": "^4.41.12",
+		"@types/webpack-dev-server": "^3.10.1",
+		"babel-loader": "^8.1.0",
+		"babel-preset-react": "^6.24.1",
+		"classnames": "^2.2.6",
+		"clean-webpack-plugin": "^3.0.0",
+		"cross-env": "^7.0.2",
+		"css-loader": "^4.3.0",
+		"file-loader": "^6.0.0",
+		"fork-ts-checker-webpack-plugin": "^4.1.3",
+		"lodash": "^4.17.20",
+		"mini-css-extract-plugin": "^1.0.0",
+		"mobx": "^5.15.4",
+		"mobx-react-lite": "^2.0.6",
+		"node-sass": "^4.13.1",
+		"optimize-css-assets-webpack-plugin": "^5.0.3",
+		"react": "^16.13.1",
+		"react-dom": "^16.13.1",
+		"react-hot-loader": "^4.12.20",
+		"resolve-url-loader": "^3.1.1",
+		"sass-loader": "^8.0.2",
+		"style-loader": "^1.1.4",
+		"ts-loader": "^7.0.1",
+		"ts-node": "^8.9.0",
+		"tsconfig-paths-webpack-plugin": "^3.2.0",
+		"typescript": "^3.8.3",
+		"webpack": "^4.44.2",
+		"webpack-cli": "^3.3.12",
+		"webpack-config": "^7.5.0",
+		"webpack-dev-server": "^3.11.0",
+		"webpack-manifest-plugin": "^3.0.0-rc.0"
+	},
+	"scripts": {
+		"test": "jest",
+		"dev-front-hmr": "cls && cross-env NODE_ENV=development webpack-dev-server --mode development",
+		"prod-front": "cls && cross-env NODE_ENV=productoin webpack-dev-server --mode production",
+		"build": "cls && cross-env NODE_ENV=production webpack --mode production"
+	},
+	"jest": {
+		"setupFilesAfterEnv": [
+			"<rootDir>test/setupEnzyme.ts"
+		],
+		"testMatch": [
+			"**/__tests__/**/*.+(ts|tsx|js)",
+			"**/?(*.)+(spec|test).+(ts|tsx|js)"
+		],
+		"transform": {
+			"^.+\\.(ts|tsx)$": "ts-jest"
+		},
+		"moduleNameMapper": {
+			"\\.(css)$": "identity-obj-proxy"
+		}
+	},
+	"devDependencies": {
+		"enzyme": "^3.11.0",
+		"enzyme-adapter-react-16": "^1.15.5",
+		"enzyme-to-json": "^3.6.1",
+		"jest": "^26.5.3",
+		"jsdom": "^16.4.0",
+		"jsdom-global": "^3.0.2",
+		"ts-jest": "^26.4.1",
+		"@types/jest": "^26.0.14"
+	}
+}
