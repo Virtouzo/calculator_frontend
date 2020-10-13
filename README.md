@@ -5,7 +5,7 @@ yarn or npm install
 # Commands
 
 * **Test:** npm run test
-* **Production webpack server:** npm run prod-front
+* **Production webpack server:** npm run prod-front (localhost:8080)
 * **Production build static files:** npm run build
 * **Development with HMR:** npm run dev-front-hmr
 
