@@ -91,7 +91,8 @@ export default class CalculatorLogic {
 			case Action.MINUS: {
 				const lastOp = this.exprOperations.slice(-1)[0];
 				if (this.exprOperations.length === 0) return;
-				if ([...arithmeticOperators, Action.SYMBOL].includes(lastOp.action)) return;
+				console.log("lastOp: ", lastOp);
+				if ([...arithmeticOperators, Action.SYMBOL, Action.FLOAT].includes(lastOp.action)) return;
 				this.exprOperations.push(op);
 				break;
 			}
