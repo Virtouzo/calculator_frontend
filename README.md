@@ -1,3 +1,5 @@
+## This is front-end repo for calculator App. Back-end: https://github.com/Virtouzo/calculator_backend
+
 # Prerequisites
 
 yarn or npm install
